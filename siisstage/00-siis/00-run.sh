@@ -1,7 +1,8 @@
 #!/bin/bash -e
 
 on_chroot << EOF
-rfkill unblock 
+echo "i2c-dev" >> /etc/modules-load.c/modules.conf
+rfkill unblock wifi
 pip3 install virtualenv
 mkdir -p /home/pi/src
 rm -rf /home/pi/src/*
@@ -28,3 +29,4 @@ source ./venv/bin/activate
 pip install -r requirements.txt
 deactivate
 EOF
+
