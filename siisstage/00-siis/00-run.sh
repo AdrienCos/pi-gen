@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 on_chroot << EOF
-echo "i2c-dev" >> /etc/modules-load.c/modules.conf
+echo "i2c-dev" >> /etc/modules-load.d/modules.conf
 rfkill unblock wifi
 pip3 install virtualenv
 mkdir -p /home/pi/src
