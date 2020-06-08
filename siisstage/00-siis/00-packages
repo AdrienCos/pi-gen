@@ -9,3 +9,5 @@ raspberrypi-kernel-headers
 python3-smbus
 i2c-tools
 vlc
+screen
+nmap
